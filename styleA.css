@@ -1,0 +1,206 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f9f9fb;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  transition: 0.25s ease;
+}
+
+h2:hover {
+  color: #e74c3c;
+  transform: translateY(-3px);
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #e74c3c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #333;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #e74c3c;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 160px 20px 80px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/background.jpg') no-repeat center center/cover;
+  color: white;
+  margin-top: 80px;
+}
+
+.avatar-container {
+  margin-bottom: 20px;
+}
+
+/* Avatar glow + hover */
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: 0.35s ease;
+  box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+.avatar:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(255,255,255,1);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 15px 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Nội dung chung */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.highlight {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* About Section */
+.about p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Education & Experience */
+.degree, .experience {
+  background: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #3498db;
+  transition: 0.3s ease;
+}
+
+.degree:hover, .experience:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.experience ul {
+  margin: 10px 0 0 20px;
+}
+
+.experience li {
+  margin-bottom: 8px;
+}
+
+/* Publications */
+.paper {
+  background: #f1f8ff;
+  padding: 18px;
+  border-left: 4px solid #3498db;
+  margin-bottom: 20px;
+  border-radius: 0 5px 5px 0;
+  transition: 0.3s ease;
+}
+
+.paper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Contact */
+.contact-list {
+  margin: 20px 0;
+  list-style: none;
+}
+
+.contact-list li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .nav-links {
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+  section {
+    padding: 50px 15px;
+  }
+}
